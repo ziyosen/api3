@@ -4,7 +4,7 @@ import {
 } from "./gogo_extractor.js";
 import cheerio from "cheerio";
 
-const BaseURL = "https://gogoanime3.co";
+const BaseURL = "https://layaranime.com";
 const USER_AGENT =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
 
@@ -61,7 +61,7 @@ async function getAnime(id) {
 
     const animeid = $("input#movie_id").attr("value");
     response = await fetch(
-        "https://ajax.gogocdn.net/ajax/load-list-episode?ep_start=0&ep_end=1000000&id=" +
+        "https://layaranime.com/genre/demografi/shounen/" +
         animeid
     );
     html = await response.text();
